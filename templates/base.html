@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
+    <title>Risk Factors by ZIP Code</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
@@ -14,7 +14,7 @@
 <body>
 
 
-    <div class="ui container">
+    <div class="ui container stackable">
         <style>
             body {
               margin-top: 2%;  
@@ -36,8 +36,9 @@
 
 
  
-        <div class="ui grid">
-            <div class="eight wide column">
+        <div class="ui grid centered">
+
+           <div class="eight wide column">  
                 <form class="ui form" action="/search" method="post">
                     <div class="field">
                         <label>(5 digit ZIP code)</label>
@@ -45,25 +46,28 @@
                     </div>
                     <button class="ui red button" type="submit">Search</button>
                 </form>
-            </div>
 
-            <div class="one wide column vertical-separator"></div>
+	
 
+	<div class="ui two column grid centered">
+ 	 <div class="column">
+    	{% for key, value in todo.items() %}
+   	 <div class="ui segment">
+    	  <p class="ui big center aligned header">{{key}}: <span style="color:red">  {{value}}  </span></p>
+   	 </div>
+   	 {% endfor %}
+  	</div>
+		
+	</div>
  
 
-            <div class="seven wide column">
-                {% for key, value in todo.items() %}
-                <div class="ui segment">
-                    <p class="ui big header">{{key}} : <span style="color:red">{{value}}</span></p>
- 
-                </div>
-                {% endfor %}
 
-                
+
+           
         </div>
 
         
-    </div>
+     </div> 
 
     <h3 class="ui center aligned header" >    check out my <a href="https://www.jlm3.com/">personal website </a> </h3>
     
