@@ -5,7 +5,61 @@ queries and displays census data by zip code
 
 For styling [semantic-ui](https://semantic-ui.com/) is used.
 
-### Setup
+### Setup for local host
+
+clone repo and create virtual environment
+
+```console
+git clone https://github.com/jlmartin3/ziprisk.us
+cd ziprisk.us
+python3 -m venv venv
+```
+
+Activate environment
+```console
+. venv/bin/activate
+```
+
+or on Windows
+```console
+venv\Scripts\activate
+```
+
+
+Install Flask
+```console
+$ pip install Flask
+$ pip install Flask-SQLAlchemy
+```
+
+Set environment variables in terminal
+```console
+$ export FLASK_APP=app.py
+$ export FLASK_ENV=development
+```
+
+or on Windows
+```console
+$ set FLASK_APP=app.py
+$ set FLASK_ENV=development
+```
+
+on Windows comment out line 9 in the app.py file
+```console
+# file_path = "/var/www/basic-flask-app/data/zips.db"
+```
+
+Run the app
+```console
+$ flask run
+```
+
+
+
+
+
+
+### Setup for Server
 configuring the server 
 
 ```console
