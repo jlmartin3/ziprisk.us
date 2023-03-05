@@ -5,7 +5,7 @@ queries and displays census data by zip code
 
 For styling [semantic-ui](https://semantic-ui.com/) is used.
 
-### Setup for local host
+#### Setup for local host
 
 clone repo and create virtual environment
 
@@ -59,7 +59,7 @@ $ flask run
 
 
 
-### Setup for Server
+#### Setup for Server
 configuring the server 
 
 ```console
